@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: A ASUS
+Build-Jdk: 17.0.5
+Main-Class: NewApp.MyNewApp.MainApp
+Created-By: Maven Integration for Eclipse
+

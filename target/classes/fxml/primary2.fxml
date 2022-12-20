@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.browniebytes.javafx.control.DateTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewApp.MyNewApp.ForAllDevices">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelErrorsAgentToken" text="Для получения информации об устройствах необходимо заполнить данные ниже" />
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label text="Токен Агента: " />
+                  <TextField fx:id="XAgentToken" promptText="Введите токен агента" />
+               </children>
+            </HBox>
+            <Button fx:id="BtnAllDevices" minWidth="70.0" mnemonicParsing="false" onAction="#getAllDevices" text="Получить">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Button>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="600.0">
+               <children>
+                  <Label text="Доступные устройства:" />
+                  <ComboBox fx:id="CoboBoxAllDevices" onAction="#CoboBoxAllDevicesOnAction" prefWidth="200.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="600.0">
+               <children>
+                  <Label text="Доступные датчики:     " />
+                  <ComboBox fx:id="id_devices" prefWidth="200.0" />
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label minWidth="80.0" text="Значение:" />
+                  <TextField fx:id="ValueOnDevice" minWidth="175.2" promptText="Введите значение" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" minWidth="80.0" text="Дата и время:" />
+                  <DateTimePicker fx:id="DateAndTime">
+                     <HBox.margin>
+                        <Insets top="13.0" />
+                     </HBox.margin>
+                  </DateTimePicker>
+               </children>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </HBox>
+            <Button fx:id="BtnNewValue" minWidth="70.0" mnemonicParsing="false" onAction="#BtnNewValueClick" text="Внести" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="TOP_RIGHT" maxHeight="30.0" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#exit" text="Авторизоваться снова">
+               <HBox.margin>
+                  <Insets bottom="5.0" right="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
